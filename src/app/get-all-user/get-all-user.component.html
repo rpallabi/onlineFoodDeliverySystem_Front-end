@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container d-flex justify-content-center">
+  <button type="button" class="btn btn btn-dark ml-2">
+    <a class="nav-link active" routerLink="" routerLinkActrive="active"></a>Upload Food</button>&nbsp;
+  <button type="button" class="btn btn btn-dark ml-2">Check Delivery status</button>&nbsp;
+  <button type="button" class="btn btn btn-dark ml-2">Check Payment Status </button>&nbsp;
+  <button type="button" class="btn btn btn-dark ml-2">Order Items</button>&nbsp;
+  <br><br>
+  <button type="button" class="btn btn btn-dark ml-2 mr-5">Logout</button>
+</div>
+</nav>
+<div class="Container">
+<router-outlet></router-outlet>
+</div>
+<div class="container">
+  <p class="text-center font-weight-bold"> List of All User and Admin deatils</p>
+<table class="table table-success md-5">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">userName</th>
+        
+        <th scope="col">email</th>
+        <th scope="col">phoneNumber</th>
+        <th scope="col">address</th>
+        <th scope="col">userType</th>
+        <th scope="col">Action</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.userName}}</td>
+        
+        <td>{{user.email}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.userType}}</td>
+        <td><div class="container "><button type="button" class="btn btn-danger mr-2">Delete</button>
+          &nbsp;
+          <button type="button" class="btn btn-success ml-2">Update</button></div></td>
+       
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+

@@ -1,0 +1,19 @@
+<div class="container mt-5 " >
+    <h2 class=" text-center font-weight-bold mb-3 ms-5 text-dark fw-bolder"> Admin Login</h2>
+    <div *ngIf="AdminloginError" class="error-message">{{ AdminloginError }}</div>
+    <form (submit)="adminlogin()">
+        <div class="form-group col-md-8 ms-5">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="email"  name="email" >
+            <span id="emailError" class="error"></span>
+        </div>
+
+        <div class="form-group col-md-8 ms-5">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="password"  name="password" >
+            <span id="passwordError" class="error"></span>
+        </div>
+<br>
+        <button type="submit" class="btn btn-primary ms-5">Login</button>
+    </form>
+</div>
